@@ -220,7 +220,7 @@ public final class Notification {
 
             PendingIntent pi = PendingIntent.getBroadcast(context, 0, intent, FLAG_CANCEL_CURRENT);
             if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-                    pi = PendingIntent.getBroadcast(context, 0, intent, 0 or FLAG_IMMUTABLE)
+                    pi = PendingIntent.getBroadcast(context, 0, intent, 0 or FLAG_IMMUTABLE);
             }
             try {
                 switch (options.getPrio()) {
@@ -308,7 +308,7 @@ public final class Notification {
 
             PendingIntent pi = PendingIntent.getBroadcast(context, 0, intent, 0);
             if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-                    pi = PendingIntent.getBroadcast(context, 0, intent, 0 or FLAG_IMMUTABLE)
+                    pi = PendingIntent.getBroadcast(context, 0, intent, 0 or FLAG_IMMUTABLE);
             }
 
             
