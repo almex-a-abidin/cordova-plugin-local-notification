@@ -27,6 +27,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Build;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationCompat.MessagingStyle.Message;
 import android.support.v4.media.app.NotificationCompat.MediaStyle;
@@ -404,7 +405,7 @@ public final class Builder {
 
         int reqCode = random.nextInt();
 
-        PendingIntent contentIntent = Build.VERSION.SDK_INT >= Build.VERSION_CODES.M ? PendingIntent.getService(
+        PendingIntent contentIntent = (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) ? PendingIntent.getService(
                 context, reqCode, intent, FLAG_UPDATE_CURRENT or FLAG_IMMUTABLE) : PendingIntent.getService(
                 context, reqCode, intent, FLAG_UPDATE_CURRENT);
 
