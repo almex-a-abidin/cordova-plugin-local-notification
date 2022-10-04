@@ -105,7 +105,6 @@
                 android:name="de.appplant.cordova.plugin.notification.util.AssetProvider"
                 android:authorities="${applicationId}.localnotifications.provider"
                 android:exported="false"
-                tools:node="merge"
                 android:grantUriPermissions="true" >
                 <meta-data
                     android:name="android.support.FILE_PROVIDER_PATHS"
@@ -114,24 +113,20 @@
 
             <receiver
                 android:name="de.appplant.cordova.plugin.localnotification.TriggerReceiver"
-                android:exported="false"
-                tools:node="merge" />
+                android:exported="false" />
 
             <receiver
                 android:name="de.appplant.cordova.plugin.localnotification.ClearReceiver"
-                android:exported="false"
-                tools:node="merge" />
+                android:exported="false" />
 
             <service
                 android:name="de.appplant.cordova.plugin.localnotification.ClickReceiver"
-                android:exported="false"
-                tools:node="merge" />
+                android:exported="false" />
 
             <receiver
                 android:name="de.appplant.cordova.plugin.localnotification.RestoreReceiver"
                 android:directBootAware="true"
-                android:exported="false"
-                tools:node="merge" >
+                android:exported="false" >
                 <intent-filter>
                     <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
                     <action android:name="android.intent.action.BOOT_COMPLETED" />
