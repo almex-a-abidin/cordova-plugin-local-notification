@@ -219,7 +219,7 @@ public final class Notification {
                 continue;
 
             PendingIntent pi = PendingIntent.getBroadcast(context, 0, intent, FLAG_CANCEL_CURRENT);
-            if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            if(android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.S) {
                     pi = PendingIntent.getBroadcast(context, 0, intent,FLAG_IMMUTABLE);
             }
             try {
@@ -307,7 +307,7 @@ public final class Notification {
             Intent intent = new Intent(action);
 
             PendingIntent pi = PendingIntent.getBroadcast(context, 0, intent, 0);
-            if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            if(android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.S) {
                     pi = PendingIntent.getBroadcast(context, 0, intent,FLAG_IMMUTABLE);
             }
 
