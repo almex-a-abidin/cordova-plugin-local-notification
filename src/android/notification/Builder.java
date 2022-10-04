@@ -375,7 +375,7 @@ public final class Builder {
 
         int reqCode = random.nextInt();
 
-        PendingIntent deleteIntent = (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) ? PendingIntent.getBroadcast(
+        PendingIntent deleteIntent = (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) ? PendingIntent.getBroadcast(
                 context, reqCode, intent,FLAG_IMMUTABLE) : PendingIntent.getBroadcast(
                 context, reqCode, intent, FLAG_UPDATE_CURRENT);
 
@@ -405,7 +405,7 @@ public final class Builder {
 
         int reqCode = random.nextInt();
 
-        PendingIntent contentIntent = (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) ? PendingIntent.getService(
+        PendingIntent contentIntent = (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) ? PendingIntent.getService(
                 context, reqCode, intent, FLAG_IMMUTABLE) : PendingIntent.getService(
                 context, reqCode, intent, FLAG_UPDATE_CURRENT);
 
@@ -456,7 +456,7 @@ public final class Builder {
 
         int reqCode = random.nextInt();
 
-        return (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) ? PendingIntent.getService(context, reqCode, intent, FLAG_IMMUTABLE) : PendingIntent.getService(context, reqCode, intent, FLAG_UPDATE_CURRENT);
+        return (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) ? PendingIntent.getService(context, reqCode, intent, FLAG_IMMUTABLE) : PendingIntent.getService(context, reqCode, intent, FLAG_UPDATE_CURRENT);
     }
 
     /**
