@@ -218,7 +218,7 @@ public final class Notification {
             if (!date.after(new Date()) && trigger(intent, receiver))
                 continue;
 
-            PendingIntent pi = PendingIntent.getBroadcast(context, 0, intent, FLAG_CANCEL_CURRENT || FLAG_IMMUTABLE);
+            PendingIntent pi = PendingIntent.getBroadcast(context, 0, intent, FLAG_CANCEL_CURRENT | FLAG_IMMUTABLE);
             try {
                 switch (options.getPrio()) {
                     case PRIORITY_MIN:
@@ -303,7 +303,7 @@ public final class Notification {
         for (String action : actions) {
             Intent intent = new Intent(action);
 
-            PendingIntent pi = PendingIntent.getBroadcast(context, 0, intent, 0 || FLAG_IMMUTABLE);
+            PendingIntent pi = PendingIntent.getBroadcast(context, 0, intent, 0 | FLAG_IMMUTABLE);
 
 
             
